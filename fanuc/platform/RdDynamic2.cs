@@ -35,7 +35,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_rddynamic2",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Position/cnc_rddynamic2",
+                doc = "https://docs.ladder99.com/focas-api/position/cnc_rddynamic2.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_rddynamic2 = new {axis, length}},

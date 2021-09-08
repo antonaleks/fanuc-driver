@@ -25,7 +25,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_rdprogline",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Program/cnc_rdprogline",
+                doc = "https://docs.ladder99.com/focas-api/program/cnc_rdprogline.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_rdprogline = new {prog_no, line_no, line_len_in, data_len_in}},

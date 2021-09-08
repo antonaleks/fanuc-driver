@@ -25,7 +25,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_svdtrddata",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Servo/cnc_svdtrddata",
+                doc = "https://docs.ladder99.com/focas-api/servo/cnc_svdtrddata.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_svdtrddata = new {length}},

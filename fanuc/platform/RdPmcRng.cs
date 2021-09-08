@@ -42,7 +42,7 @@ namespace l99.driver.fanuc
             {
                 method = "pmc_rdpmcrng",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Pmc/pmc_rdpmcrng",
+                doc = "https://docs.ladder99.com/focas-api/pmc/pmc_rdpmcrng.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {pmc_rdpmcrng = new {adr_type, data_type, s_number, e_number, length, IODBPMC_type}},

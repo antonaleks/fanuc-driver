@@ -24,7 +24,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_rdexecpt",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Program/cnc_rdexecpt",
+                doc = "https://docs.ladder99.com/focas-api/program/cnc_rdexecpt.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_rdexecpt = new { }},

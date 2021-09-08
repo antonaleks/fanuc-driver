@@ -81,7 +81,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_diagnoss",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Misc/cnc_diagnoss",
+                doc = "https://docs.ladder99.com/focas-api/misc/cnc_diagnoss.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_diagnoss = new {number, axis, length, ODBDGN_type}},

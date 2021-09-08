@@ -23,7 +23,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_acts",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Position/cnc_acts",
+                doc = "https://docs.ladder99.com/focas-api/position/cnc_acts.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_acts = new { }},

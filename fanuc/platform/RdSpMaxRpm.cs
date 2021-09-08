@@ -23,7 +23,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_rdspmaxrpm",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Position/cnc_rdspmaxrpm",
+                doc = "https://docs.ladder99.com/focas-api/position/cnc_rdspmaxrpm.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_rdspmaxrpm = new {sp_no}},

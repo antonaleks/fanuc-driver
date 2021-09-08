@@ -1,13 +1,13 @@
 machines:
   - id: sim
-    enabled: !!bool false
+    enabled: !!bool true
     type: l99.driver.fanuc.FanucMachine, fanuc
     strategy: l99.driver.fanuc.collectors.UseCase01, fanuc
     handler: l99.driver.fanuc.handlers.Native, fanuc
     
     broker:
       enabled: !!bool true
-      net_ip: 10.20.30.102
+      net_ip: 192.168.100.69
       net_port: !!int 1883
       auto_connect: !!bool true
       publish_status: !!bool true
@@ -21,19 +21,19 @@ machines:
 
     l99.driver.fanuc.FanucMachine, fanuc:
       sweep_ms: !!int 1000
-      net_ip: 10.20.30.101
+      net_ip: 172.16.100.54
       net_port: !!int 8193
       net_timeout_s: !!int 3
       
   - id: sim_lua
-    enabled: !!bool true
+    enabled: !!bool false
     type: l99.driver.fanuc.FanucMachine, fanuc
     strategy: l99.driver.fanuc.collectors.NLuaRunner, fanuc
     handler: l99.driver.fanuc.handlers.Native, fanuc
     
     broker:
       enabled: !!bool true
-      net_ip: 10.20.30.102
+      net_ip: 192.168.100.69
       net_port: !!int 1883
       auto_connect: !!bool true
       publish_status: !!bool true
@@ -47,7 +47,7 @@ machines:
 
     l99.driver.fanuc.FanucMachine, fanuc:
       sweep_ms: !!int 1000
-      net_ip: 10.20.30.101
+      net_ip: 172.16.100.54
       net_port: !!int 8193
       net_timeout_s: !!int 3
       
@@ -62,7 +62,7 @@ machines:
     
     broker:
       enabled: !!bool false
-      net_ip: 172.16.10.3
+      net_ip: 192.168.100.69
       net_port: !!int 1883
       auto_connect: !!bool true
       publish_status: !!bool true
@@ -76,6 +76,6 @@ machines:
         
     l99.driver.fanuc.FanucMachine, fanuc:
       sweep_ms: !!int 1000
-      net_ip: 172.16.13.100
+      net_ip: 172.16.100.54
       net_port: !!int 8193
       net_timeout_s: !!int 3

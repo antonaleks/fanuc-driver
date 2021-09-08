@@ -42,7 +42,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_modal",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Misc/cnc_modal",
+                doc = "https://docs.ladder99.com/focas-api/misc/cnc_modal.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_modal = new {type, block, ODBMDL_type}},

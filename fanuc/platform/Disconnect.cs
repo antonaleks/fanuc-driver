@@ -21,7 +21,7 @@ namespace l99.driver.fanuc
             {
                 method = "cnc_freelibhndl",
                 invocationMs = ndr.ElapsedMilliseconds,
-                doc = "https://ladder99.github.io/fanuc-driver/focas/SpecE/Handle/cnc_freelibhndl",
+                doc = "https://docs.ladder99.com/focas-api/handle/cnc_freelibhndl.xml",
                 success = ndr.RC == Focas.EW_OK,
                 rc = ndr.RC,
                 request = new {cnc_freelibhndl = new { }},
