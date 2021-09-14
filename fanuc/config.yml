@@ -7,7 +7,7 @@ machines:
     
     broker:
       enabled: !!bool true
-      net_ip: 192.168.100.69
+      net_ip: 172.16.0.116
       net_port: !!int 1883
       auto_connect: !!bool true
       publish_status: !!bool true
@@ -21,7 +21,7 @@ machines:
 
     l99.driver.fanuc.FanucMachine, fanuc:
       sweep_ms: !!int 1000
-      net_ip: 172.16.100.54
+      net_ip: 172.16.0.148
       net_port: !!int 8193
       net_timeout_s: !!int 3
       

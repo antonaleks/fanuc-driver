@@ -61,6 +61,8 @@ namespace l99.driver.fanuc.collectors
             await Apply(typeof(fanuc.veneers.RdPmcRngByte), "y0003");
             
             await Apply(typeof(fanuc.veneers.RdPmcRngByte), "y0008");
+            
+
         }
         
         public override async Task InitPathsAsync()
@@ -83,6 +85,10 @@ namespace l99.driver.fanuc.collectors
         public override async Task InitAxisAndSpindleAsync()
         {
             
+            await Apply(typeof(fanuc.veneers.RdDynamic2_1), "axis_data");
+            
+            await Apply(typeof(fanuc.veneers.RdActs2), "spindle_data");
+
         }
         
         public override async Task<bool> CollectBeginAsync()
@@ -98,6 +104,11 @@ namespace l99.driver.fanuc.collectors
             await SetNativeAndPeel("alarms2", await platform.RdAlmMsg2AllAsync(10,20));
                     
             await SetNativeAndPeel("message1", await platform.RdOpMsgAsync(0, 6+256));
+            
+            await SetNativeAndPeel("message1", await platform.RdOpMsgAsync(0, 6+256));
+            
+            await Apply(typeof(fanuc.veneers.RdAxisname), "axis_names");
+
             //await SetNativeAndPeel("message2", await platform.RdOpMsgAsync(1, 6+256));
             
             //var a = await platform.RdOpMsg1_15_15i_Async();
@@ -142,7 +153,10 @@ namespace l99.driver.fanuc.collectors
 
         public override async Task CollectForEachAxisAsync(short current_axis, string axis_name, dynamic axis_split, dynamic axis_marker)
         {
-            
+            await Peel("axis_data",
+                await SetNative("axis_dynamic", await platform.RdDynamic2Async(current_axis, 44, 2)), 
+                Get("figures"), 
+                current_axis - 1);
         }
 
         public override async Task CollectForEachSpindleAsync(short current_spindle, string spindle_name, dynamic spindle_split, dynamic spindle_marker)
